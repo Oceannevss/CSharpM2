@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InterfaceM2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Welcome to interface M2!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            <Editor 
+                x:Name="CorrectionEditor"
+                Placeholder="Text à corriger"
+                HeightRequest="100" />
+
+            <Button
+                x:Name="CorrectionBtn"
+                Text="Text à corriger" 
+                SemanticProperties.Hint="Correct the sentense that you send"
+                Clicked="CorrectText"
+                HorizontalOptions="Fill" />
+            
+            <Label
+                x:Name="ResponseCorrection"
+                Text=""
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level4" />
+
+            <Editor 
+                x:Name="TranslateEditor"
+                Placeholder="Text à traduire"
+                HeightRequest="100" />
+
+            <Button 
+                x:Name="TranslateBtn"
+                Text="Text à traduire" 
+                SemanticProperties.Hint="Translate the sentense that you send"
+                Clicked="TranslateText"
+                HorizontalOptions="Fill"  />
+
+            <Label
+                x:Name="ResponseTranslation"
+                Text=""
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level4" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
